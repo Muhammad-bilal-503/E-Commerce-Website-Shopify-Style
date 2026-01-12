@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🛍️ MB SHOPING HUB </h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" id="nav-home" class="nav-link active">Home</a></li>
+                <li><a href="#" id="nav-cart" class="nav-link">Cart (<span id="cart-count">0</span>)</a></li>
+                <li id="auth-section">
+                    <a href="#" id="nav-login" class="nav-link">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- Product Listing Section (visible by default) -->
+        <section id="products-section" class="section active">
+            <!-- Hero Section -->
+            <div id="hero-section" class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">Welcome to MB SHOPING HUB</h1>
+                    <p class="hero-subtitle">Discover Amazing Products at Unbeatable Prices</p>
+                    <p class="hero-description">Shop the latest trends in fashion, electronics, and more. Quality products delivered to your door.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-hero" onclick="document.getElementById('nav-cart').click()">Shop Now</button>
+                        <button class="btn btn-secondary btn-hero" onclick="document.getElementById('nav-home').click()">Browse Products</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-graphic">🛍️</div>
+                </div>
+            </div>
+            
+            <h2>Our Products</h2>
+            <div id="products-container" class="products-grid">
+                <!-- Products will be dynamically rendered here -->
+            </div>
+        </section>
+
+        <!-- Cart Section (hidden initially) -->
+        <section id="cart-section" class="section">
+            <h2>Your Cart</h2>
+            <div id="cart-container">
+                <div id="cart-items" class="cart-items">
+                    <!-- Cart items will be dynamically rendered here -->
+                </div>
+                <div id="cart-summary" class="cart-summary">
+                    <div class="summary-row">
+                        <span>Total:</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    <button id="checkout-btn" class="btn btn-primary btn-large">Checkout</button>
+                    <p id="checkout-message" class="message"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Panel Section (hidden initially) -->
+        <section id="admin-section" class="section">
+            <div class="admin-header">
+                <h2>👑 Admin Panel</h2>
+                <button id="admin-logout-btn" class="btn btn-danger">Logout</button>
+            </div>
+
+            <!-- Add Product Form -->
+            <div class="admin-form-container">
+                <h3>➕ Add New Product</h3>
+                <form id="add-product-form" class="admin-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-name">Product Name:</label>
+                            <input type="text" id="product-name" name="product-name" required placeholder="Enter product name">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-price">Price ($):</label>
+                            <input type="number" id="product-price" name="product-price" step="0.01" min="0" required placeholder="0.00">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-stock">Stock Quantity:</label>
+                            <input type="number" id="product-stock" name="product-stock" min="0" required placeholder="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="product-image">Image URL:</label>
+                            <input type="url" id="product-image" name="product-image" required placeholder="https://example.com/image.jpg">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                    <p id="admin-message" class="message"></p>
+                </form>
+            </div>
+
+            <!-- Product Management Table -->
+            <div class="admin-table-container">
+                <h3>📦 Product Management</h3>
+                <div id="admin-products-list" class="admin-products-list">
+                    <!-- Products will be dynamically rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Login/Register Modal -->
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-icon">🔐</div>
+                    <h2 id="modal-title">Welcome Back</h2>
+                    <p class="modal-subtitle" id="modal-subtitle">Sign in to your account to continue</p>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <form id="auth-form">
+                    <div class="form-group">
+                        <label for="username">
+                            <span class="label-icon">👤</span>
+                            Username
+                        </label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">
+                            <span class="label-icon">🔒</span>
+                            Password
+                        </label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-type">
+                            <span class="label-icon">👥</span>
+                            Login as
+                        </label>
+                        <select id="user-type" name="user-type" class="form-select">
+                            <option value="user">Regular User</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <p id="auth-error" class="error-message"></p>
+                    <button type="submit" id="auth-submit-btn" class="btn btn-primary btn-submit">
+                        <span id="submit-text">Login</span>
+                        <span class="btn-loader" style="display: none;">⏳</span>
+                    </button>
+                    <div class="form-divider">
+                        <span>or</span>
+                    </div>
+                    <p class="auth-switch">
+                        <span id="switch-text">Don't have an account?</span>
+                        <a href="#" id="switch-to-register">Register here</a>
+                    </p>
+                    <div class="demo-credentials">
+                        <div class="demo-header">
+                            <span class="demo-icon">💡</span>
+                            <strong>Quick Access</strong>
+                        </div>
+                        <div class="demo-item">
+                            <span class="demo-label">User:</span>
+                            <code>user1</code> / <code>pass123</code>
+                        </div>
+                        <div class="demo-item">
+                            <span class="demo-label">Admin:</span>
+                            <code>admin</code> / <code>admin123</code>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ShopHub</h3>
+                <p>Your one-stop destination for quality products at amazing prices. Shop with confidence and enjoy fast delivery.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">📘</a>
+                    <a href="#" class="social-link">📷</a>
+                    <a href="#" class="social-link">🐦</a>
+                    <a href="#" class="social-link">💼</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#" id="footer-home">Home</a></li>
+                    <li><a href="#" id="footer-products">Products</a></li>
+                    <li><a href="#" id="footer-cart">Cart</a></li>
+                    <li><a href="#" id="footer-about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                    <li>📧 support@shophub.com</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Shopping Street, City</li>
+                    <li>🕒 Mon-Fri: 9AM-6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShopHub. All rights reserved. | Made with ❤️ for Web Technology Final Paper</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
