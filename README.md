@@ -97,7 +97,7 @@ The website is fully responsive and works seamlessly on desktop, tablet, and mob
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Final Paper Web/
@@ -136,7 +136,7 @@ Final Paper Web/
 
 ---
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Edge, Safari)
@@ -172,7 +172,7 @@ Final Paper Web/
 
 ---
 
-## 📖 Usage Guide
+##  Usage Guide
 
 ### For Customers
 
@@ -225,7 +225,7 @@ Final Paper Web/
 
 ---
 
-## 👑 Admin Panel
+##  Admin Panel
 
 ### Accessing Admin Panel
 
