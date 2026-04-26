@@ -32,9 +32,9 @@ The website is fully responsive and works seamlessly on desktop, tablet, and mob
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🛒 Customer Features
+###  Customer Features
 
 1. **Product Browsing**
    - View all available products with images
@@ -61,7 +61,7 @@ The website is fully responsive and works seamlessly on desktop, tablet, and mob
    - Order confirmation
    - Order history stored in localStorage
 
-### 👑 Admin Features
+###  Admin Features
 
 1. **Product Management**
    - Add new products
@@ -81,7 +81,7 @@ The website is fully responsive and works seamlessly on desktop, tablet, and mob
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **HTML5** - Semantic markup
 - **CSS3** - Modern styling with Grid, Flexbox, and animations
