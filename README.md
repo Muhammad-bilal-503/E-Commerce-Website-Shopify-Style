@@ -1,8 +1,8 @@
-# 🛍️ E-Commerce Website - MB Shopping Hub
+#  E-Commerce Website - MB Shopping Hub
 
 A complete, beginner-friendly but professional **single-page e-commerce website (Shopify-style)** built using only HTML5, CSS3, and Pure JavaScript. This project includes a full admin panel for product management and demonstrates simulated backend behavior using localStorage.
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Project Overview](#project-overview)
 - [Features](#features)
@@ -17,7 +17,7 @@ A complete, beginner-friendly but professional **single-page e-commerce website 
 
 ---
 
-## 🎯 Project Overview
+##  Project Overview
 
 This is a fully functional e-commerce website built for **Web Technology Final Paper**. It demonstrates:
 
