@@ -318,7 +318,7 @@ This project fulfills **Exam Question #2 and #3** requirements:
 
 ---
 
-## 🧪 Testing Guide
+##  Testing Guide
 
 ### Test Flow 1: Customer Shopping
 
@@ -404,7 +404,7 @@ This project fulfills **Exam Question #2 and #3** requirements:
 
 ---
 
-## 💻 Code Structure
+##  Code Structure
 
 ### JavaScript Functions Overview
 
@@ -442,7 +442,7 @@ This project fulfills **Exam Question #2 and #3** requirements:
 
 ---
 
-## 🎨 Design Features
+##  Design Features
 
 ### Responsive Breakpoints
 - **Desktop**: Full layout with grid
@@ -466,7 +466,7 @@ This project fulfills **Exam Question #2 and #3** requirements:
 
 ---
 
-## 📊 Data Storage
+##  Data Storage
 
 All data is stored in browser's localStorage:
 
@@ -487,7 +487,7 @@ localStorage.getItem('orders')       // Order history
 
 ---
 
-## 🔒 Security Notes
+##  Security Notes
 
 ⚠️ **Important**: This is a demo/educational project. For production:
 
@@ -504,7 +504,7 @@ localStorage.getItem('orders')       // Order history
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Products Not Showing
 - Check browser console for errors
@@ -528,7 +528,7 @@ localStorage.getItem('orders')       // Order history
 
 ---
 
-## 📚 Learning Outcomes
+##  Learning Outcomes
 
 This project demonstrates:
 
@@ -542,20 +542,20 @@ This project demonstrates:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **MB Shopping Hub**  
 Web Technology Final Paper Project
 
 ---
 
-## 📄 License
+##  License
 
 This project is created for educational purposes as part of Web Technology Final Paper.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Built with pure HTML, CSS, and JavaScript
 - No external libraries or frameworks
@@ -564,7 +564,7 @@ This project is created for educational purposes as part of Web Technology Final
 
 ---
 
-## 📞 Support
+##  Support
 
 For questions or issues:
 - Check browser console for error messages
