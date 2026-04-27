@@ -2,7 +2,7 @@
 
 A complete, beginner-friendly but professional **single-page e-commerce website (Shopify-style)** built using only HTML5, CSS3, and Pure JavaScript. This project includes a full admin panel for product management and demonstrates simulated backend behavior using localStorage.
 
-##  Table of Contents hhhhhh
+##  Table of Contents 
 
 - [Project Overview](#project-overview)
 - [Features](#features)
