@@ -564,14 +564,4 @@ This project is created for educational purposes as part of Web Technology Final
 
 ---
 
-##  Support
 
-For questions or issues:
-- Check browser console for error messages
-- Verify all files are in the same directory
-- Ensure modern browser is being used
-- Review code comments for guidance
-
----
-
-**Happy Coding! 🚀**
